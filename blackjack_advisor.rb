@@ -51,13 +51,13 @@ def hard_hits(hard_call_hash, player_card_sum, dealer_card_sum)
   end
 end
 
-soft_call_hash = {"13" => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  "14" => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  "15" => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  "16" => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  "17" => {2 => "double or hit", 3 => "double or hit", 4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  "18" => {3 => "double or hit", 4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  "19" => {6 => "double or stay"}}
+soft_call_hash = {13 => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
+                  14 => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
+                  15 => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
+                  16 => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
+                  17 => {2 => "double or hit", 3 => "double or hit", 4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
+                  18 => {3 => "double or hit", 4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
+                  19 => {6 => "double or stay"}}
 
 def soft_hits(soft_call_hash, player_card_sum, dealer_card_sum)
   if soft_call_hash[player_card_sum][dealer_card_sum] == "double or hit" || "double or stay"
