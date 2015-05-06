@@ -60,7 +60,7 @@ soft_call_hash = {"13" => {4 => "double or hit", 5 => "double or hit", 6 => "dou
                   "19" => {6 => "double or stay"}}
 
 def soft_hits(soft_call_hash, player_card_sum, dealer_card_sum)
-  if soft_call_hash[player_card_sum][dealer_card_sum] = "double or hit" || "double or stay"
+  if soft_call_hash[player_card_sum][dealer_card_sum] == "double or hit" || "double or stay"
     puts soft_call_hash[player_card_sum][dealer_card_sum]
   elsif player_card_sum = 9 || 10 && card_value_hash[dealer_card] =18
     puts "hit"
@@ -76,25 +76,3 @@ if players_cards_array.include?("A") #looking for Aces in player cards
 else
   hard_hits(hard_call_hash, player_card_sum, dealer_card_sum) #no Aces, run this method
 end
-
-# puts "Your cards equals #{player_cards_sum}"
-# def hard_finder
-#
-# end
-#
-# def soft_finder
-# end
-#
-# if first_card || second_card = "A"
-#   puts hard_finder
-# else
-#   puts easy_finder
-# end
-#
-# puts "What is the dealer's card?"
-# dealer_card = gets.chomp
-#
-#
-# def hard_finder
-#
-# players_cards_hash = {}
