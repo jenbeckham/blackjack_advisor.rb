@@ -30,31 +30,30 @@ def hard_hits(player_card_sum)
     puts "hit"
   elsif player_card_sum < 17 && card_value_hash[dealer_card] > 6
     puts "hit"
-  elsif player_card_sum < 13 && card_value_hash[dealer_card] < 4
+  elsif player_card_sum < 12 && card_value_hash[dealer_card] < 4
     puts "hit"
   else
     puts "stay"
   end
 end
 
-stay
-
-if players_cards_array.include?("A")
-  puts "hello"
-else
-  hard_hits(player_card_sum)
-# elseclear
-
-#   soft_hits
+def soft_hits(player_card_sum)
+  if player_card_sum = 9 || 10 && card_value_hash[dealer_card] =18
+    puts "hit"
+  elsif player_card_sum < 18
+    puts "hit"
+  else
+    puts "stay"
+  end
 end
 
-# puts cards_value[first_card]
-# puts cards_value[second_card]
-# #player_cards_sum = first_card.to_i + second_card.to_i
+if players_cards_array.include?("A")
+  soft_hits(player_card_sum)
+else
+  hard_hits(player_card_sum)
+end
+
 # puts "Your cards equals #{player_cards_sum}"
-
-
-
 # def hard_finder
 #
 # end
