@@ -1,10 +1,10 @@
 #Description
 Ever wanted to play single deck blackjack but did not know how? With blackjack advisor, you will never need to wonder about what to do next. This program will give you advice on which move would most likely to give you the big <strong>WIN<strong>!
 #How Do You Play
-The user will need to answer the following three questions:
-1. What is your first card?
-1. What is your second card?
-1. What is the dealer's card?
+The user will need to answer the following three questions:<br>
+1. What is your first card?<br>
+2. What is your second card?<br>
+3. What is the dealer's card?
 
 The user can answer by entering a number or first letter of the face card (J,Q,K,A).
 
