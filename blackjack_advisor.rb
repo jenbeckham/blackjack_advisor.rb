@@ -62,7 +62,8 @@ soft_call_hash = {13 => {4 => "double or hit", 5 => "double or hit", 6 => "doubl
                   16 => {4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
                   17 => {2 => "double or hit", 3 => "double or hit", 4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
                   18 => {3 => "double or hit", 4 => "double or hit", 5 => "double or hit", 6 => "double or hit"},
-                  19 => {6 => "double or stay"}}
+                  19 => {6 => "double or stay"},
+                  20 => "0"}
 
 def soft_hits(soft_call_hash, player_card_sum, dealer_card_sum)
   if soft_call_hash[player_card_sum][dealer_card_sum] == "double or hit"
@@ -81,6 +82,8 @@ end
 pair_call_hash = {2 => {8 => "hit"},
                   3 => {8 => "hit"},
                   4 => {8 => "hit"},
+                  5 => "0",
+                  6 => "0",
                   7 => {8 => "hit", 18 => "stay"},
                   8 => {4 => "hit", 6 => "hit", 8 => "hit", 12 => "hit"},
                   9 => {4 => "hit", 6 => "hit", 8 => "hit", 12 => "hit", 14 => "hit"},
