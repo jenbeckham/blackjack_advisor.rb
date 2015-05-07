@@ -6,7 +6,7 @@ The user will need to answer the following three questions:<p>
 2. What is your second card?<br>
 3. What is the dealer's card?
 
-The user can answer by entering a number or first letter of the face card (J,Q,K,A).
+The user can answer by entering a number, first letter of facecard, or facecard name.
 
 The program will then give the user advice which move to do.
 
