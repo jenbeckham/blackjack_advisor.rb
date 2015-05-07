@@ -62,7 +62,7 @@ soft_call_hash = {13 => {4 => "double or hit", 5 => "double or hit", 6 => "doubl
 def soft_hits(soft_call_hash, player_card_sum, dealer_card_sum)
   if soft_call_hash[player_card_sum][dealer_card_sum] == "double or hit" || "double or stay"
     puts soft_call_hash[player_card_sum][dealer_card_sum]
-  elsif player_card_sum = 9 || 10 && card_value_hash[dealer_card] =18
+  elsif player_card_sum == 18 && dealer_card_sum > 8
     puts "hit"
   elsif player_card_sum < 18
     puts "hit"
@@ -71,8 +71,35 @@ def soft_hits(soft_call_hash, player_card_sum, dealer_card_sum)
   end
 end
 
-if players_cards_array.include?("A") #looking for Aces in player cards
-  soft_hits(player_card_sum) #if Aces found, then run this method
+def pair_hits(player_card_sum, dealer_card_sum)
+  puts "hello"
+  # if player_card_sum < 10 && dealer_card_sum == 8 || 9
+  #   puts "hit"
+  # elsif player_card_sum == 7 && dealer_card_sum == 7
+  #   puts "hit"
+  # elsif player_card_sum == 12 && dealer_card_sum == 8 || 9
+  #   puts "hit"
+  # elsif player_card_sum == 18 && dealer_card_sum == 7
+  #   puts "stay"
+  # elsif player_card_sum == 14 && dealer_card_sum ==9
+  #   puts "hit"
+  # elsif player_card_sum == 8 && dealer_card_sum <5
+  #   puts "hit"
+  # elsif player_card_sum <16 && dealer_card_sum >9
+  #   puts "hit"
+  # elsif player_card_sum == 10 && dealer_card_sum <10
+  #   puts "double or hit"
+  # elsif player_card_sum == 20
+  #   puts "stay"
+  # else
+  #   puts "split"
+  # end
+end
+
+if first_card == second_card
+  pair_hits(player_card_sum, dealer_card_sum)
+elsif players_cards_array.include?("A") #looking for Aces in player cards
+  soft_hits(soft_call_hash, player_card_sum, dealer_card_sum) #if Aces found, then run this method
 else
   hard_hits(hard_call_hash, player_card_sum, dealer_card_sum) #no Aces, run this method
 end
